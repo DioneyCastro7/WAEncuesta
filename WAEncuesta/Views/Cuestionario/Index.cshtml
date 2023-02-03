@@ -1,0 +1,160 @@
+﻿@model WAEncuesta.Models.TbCuestionario;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Encuesta informativa</h1>
+    <div class="form">
+        <form class="container-md" method="post" asp-action="Add">
+            <div id="section1" class="align-content-lg-center">
+                <div class="form-outline mb-4">
+                    <label for="Preguntauno" class="form-label">
+                        1. ¿Contestaré esta encuesta respecto a la experiencia
+                        de la empresa que represento?
+                    </label>
+                    <select asp-for="Preguntauno" class="form-control">
+                        Elige una Opcion.
+                        <option value="Acepto">Acepto</option>
+                        <option value="No Acepto">No Acepto</option>
+                    </select>
+                </div>
+                <div class="form-outline mb-4">
+                    <label for="Preguntados" class="form-label">2. ¿A que sector se dedica tu empresa?</label>
+                    <select asp-for="Preguntados" class="form-control">
+                        Elige una Opcion.
+                        <option value="Agricultura, cría y explotación de animales, aprovechamiento forestal,  pesca y caza">
+                            Agricultura, cría y explotación de animales, aprovechamiento forestal,  pesca y caza
+                        </option>
+                        <option value="Minería">Minería</option>
+                        <option value="Generación, transmisión, distribución y comercialización de energía eléctrica,
+                suministro de agua y de gas natural por ductos al consumidor final">
+                            Generación, transmisión, distribución y comercialización de energía eléctrica, suministro de agua y de gas natural por ductos
+                            al consumidor final
+                        </option>
+                        <option value="Construcción ">Construcción</option>
+                        <option value="Industrias manufactureras">Industrias manufactureras</option>
+                        <option value="Comercio al por mayor">Comercio al por mayor</option>
+                        <option value="Comercio al por menor">Comercio al por menor</option>
+                        <option value="Transportes, correos y almacenamiento">Transportes, correos y almacenamiento</option>
+                        <option value="Información en medios masivos ">Información en medios masivos </option>
+                        <option value="Servicios financieros y de seguros">Servicios financieros y de seguros</option>
+                        <option value="Servicios inmobiliarios y de alquiler de bienes muebles e intangibles">
+                            Servicios inmobiliarios
+                            y de alquiler de bienes muebles e intangibles
+                        </option>
+                        <option value="Servicios profesionales, científicos y técnicos">Servicios profesionales, científicos y técnicos</option>
+                        <option value="Corporativos">Corporativos</option>
+                        <option value="Servicios de apoyo a los negocios y manejo de residuos, y servicios de  remediación">
+                            Servicios de apoyo a los negocios y manejo de residuos, y servicios de  remediación
+                        </option>
+                        <option value="Servicios educativos">Servicios educativos</option>
+                        <option value="Servicios de salud y de asistencia social">Servicios de salud y de asistencia social</option>
+                        <option value="Servicios de esparcimiento culturales y deportivos, y otros servicios  recreativos">
+                            Servicios de esparcimiento culturales y deportivos, y otros servicios  recreativos
+                        </option>
+                        <option value="Servicios de alojamiento temporal y de preparación de alimentos y bebidas">
+                            Servicios de alojamiento temporal y de preparación de alimentos y bebidas
+                        </option>
+                        <option value="Otros servicios excepto actividades gubernamentales">Otros servicios excepto actividades gubernamentales</option>
+                    </select>
+                </div>
+                <div class="form-outline mb-4">
+                    <label for="Preguntatres" class="form-label">3. Número de empleados:</label>
+                    <select asp-for="Preguntatres" class="form-control">
+                        <option value="1 a 10">1 a 10</option>
+                        <option value="11 a 50">11 a 50</option>
+                        <option value="51 a 250">51 a 250</option>
+                        <option value="251 o más">251 o más</option>
+                    </select>
+                </div>
+                <div class="form-outline mb-4">
+                    <label for="pregunta4" class="form-label">4. ¿Este año habrá entrega de reparto de utilidades?</label>
+                    <select asp-for="Preguntacuatro" class="form-control">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="section2" class="align-content-lg-center">
+                <div class="form-outline mb-4">
+                    <label for="pregunta5" class="form-label">5. En comparación con el año anterior ¿Cómo será el monto repartido de PTU?</label>
+                    <select asp-for="Preguntacinco" class="form-control">
+                        <option value="Mayor">Mayor</option>
+                        <option value="Igual">Igual</option>
+                        <option value="Menor">Menor</option>
+                    </select>
+                </div>
+                <div class="form-outline mb-4">
+                    <label for="pregunta6" class="form-label">5.1 ¿Cuáles fueron las razones por las que el monto de reparto de utilidades fue  mayor?</label>
+                    <select asp-for="Preguntaseis" class="form-control">
+                        <option value="Aumento en la productividad de las y los colaboradores">Aumento en la productividad de las y los colaboradores</option>
+                        <option value="Aumento de ventas">Aumento de ventas </option>
+                        <option value="Entorno económico favorable">Entorno económico favorable</option>
+                        <option value="Nuevas oportunidades de negocio">Nuevas oportunidades de negocio</option>
+                    </select>
+                </div>
+                <div class="form-outline mb-4">
+                    <label for="pregunta7" class="form-label">5.2 ¿Cuáles fueron las razones por las que habrá menor reparto de utilidades?</label>
+                    <select asp-for="Preguntasiete" class="form-control">
+                        <option value="Disminución en la productividad de las y los colaboradores">Disminución en la productividad de las y los colaboradores</option>
+                        <option value="Afectaciones por inseguridad">Afectaciones por inseguridad</option>
+                        <option value="Afectaciones por el entorno político y económico">Afectaciones por el entorno político y económico</option>
+                        <option value="Continuación de la pandemia COVID-19">Continuación de la pandemia COVID-19</option>
+                        <option value="Problemas para mejorar la innovación y los procesos al interior de la  empresa">
+                            Problemas para mejorar la innovación y
+                            los procesos al interior de la  empresa
+                        </option>
+                        <option value="Complicaciones por la inflación">Complicaciones por la inflación</option>
+                    </select>
+                </div>
+                <div class="form-outline mb-4">
+                    <label for="pregunta8" class="form-label">6. Días de salario estimado a pagar por PTU ejercicio 2021</label>
+                    <input type="number" asp-for="Preguntaocho" maxlength="4" class="form-control" />
+                </div>
+            </div>
+
+            <div id="section3" class="align-content-lg-center">
+                <div class="form-outline mb-4">
+                    <label for="pregunta9" class="form-label">7. ¿Cuáles fueron las razones por las que no hubo reparto de utilidades?</label>
+                    <select asp-for="Preguntanueve" class="form-control">
+                        <option value="Disminución en la productividad de las y los colaboradores">Disminución en la productividad de las y los colaboradores</option>
+                        <option value="Afectaciones por inseguridad">Afectaciones por inseguridad</option>
+                        <option value="Afectaciones por el entorno político y económico">Afectaciones por el entorno político y económico</option>
+                        <option value="Continuación de la pandemia COVID-19">Continuación de la pandemia COVID-19</option>
+                        <option value="Problemas para mejorar la innovación y los procesos al interior de la  empresa">
+                            Problemas para mejorar la innovación y los procesos al interior de la  empresa
+                        </option>
+                        <option value="Complicaciones por la inflación">Complicaciones por la inflación</option>
+                    </select>
+                </div>
+                <div class="form-outline mb-4">
+                    <label for="pregunta10" class="form-label">8. El año anterior, ¿hubo reparto de PTU? </label>
+                    <select asp-for="Preguntadiez" class="form-control">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="button" class="btn btn-primary g-5" onclick="Descargar_Archivo">Descargar Registros</button>
+            </div>
+            
+
+        </form>
+    </div>
+
+</body>
+</html>
+
